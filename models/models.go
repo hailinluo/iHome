@@ -97,7 +97,7 @@ type OrderHouse struct {
 
 func init() {
 	// set default database
-	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/iHome?charset=utf8", 30)
+	orm.RegisterDataBase("default", "mysql", "root:Mysql.123@tcp(127.0.0.1:3306)/iHome?charset=utf8", 30)
 
 	// 需要在init中注册定义的model
 	orm.RegisterModel(new(User), new(House), new(Area), new(Facility), new(HouseImage), new(OrderHouse))

@@ -12,10 +12,13 @@ import (
 func main() {
 	//beego.Run("80")  指定端口
 	ignoreStaticPath()
+	//models.UploadByFilename("./README.md")
 	beego.Run()
 }
 
 func ignoreStaticPath() {
+	beego.SetStaticPath("group1/M00/", "fdfs/storage_data/data/")
+
 	//透明static
 	beego.InsertFilter("/", beego.BeforeRouter, TransparentStatic)
 	beego.InsertFilter("/*", beego.BeforeRouter, TransparentStatic)
